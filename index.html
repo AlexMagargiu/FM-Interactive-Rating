@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="./javascript.js" defer></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
@@ -32,24 +33,46 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="rating">
-          <input class="poor" type="submit" name="submit" value="1" />
-          <input class="bad" type="submit" name="submit" value="2" />
-          <input class="ok" type="submit" name="submit" value="3" />
-          <input class="good" type="submit" name="submit" value="4" />
-          <input class="excellent" type="submit" name="submit" value="5" />
-        </div>
-        <button type="submit" name="submit">SUBMIT</button>
+        <form class="rating">
+          <input type="radio" name="radio" value="1" id="1" /><label for="1"
+            >1</label
+          >
+          <input type="radio" name="radio" value="2" id="2" /><label for="2"
+            >2</label
+          >
+          <input type="radio" name="radio" value="3" id="3" /><label for="3"
+            >3</label
+          >
+          <input type="radio" name="radio" value="4" id="4" /><label for="4"
+            >4</label
+          >
+          <input type="radio" name="radio" value="5" id="5" /><label for="5"
+            >5</label
+          >
+        </form>
+        <button type="submit" name="submit" onclick="switchDisplay()">
+          SUBMIT
+        </button>
       </div>
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-
-      <!-- You selected -->
-      <!-- Add rating here -->
-      <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-      you ever need more support, don’t hesitate to get in touch! -->
-
+      <div class="thank-you">
+        <div class="thank-you-content">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="An illustration of a phone"
+          />
+          <div class="selection">
+            You selected <span class="get-value"></span> out of 5
+          </div>
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
       <!-- Thank you state end -->
     </main>
     <footer>
