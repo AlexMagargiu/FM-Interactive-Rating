@@ -29,7 +29,7 @@ main{
     justify-content: center;
 }
 
-.base{
+.base, .thank-you-content{
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -45,7 +45,7 @@ main{
     padding: 2rem;
 }
 
-.star-svg, .rating > input{
+.star-svg, .rating > label{
     height: 3rem;
     width: 3rem;
     background-color: var(--dark-blue);
@@ -56,7 +56,7 @@ main{
     margin-bottom: 1.5rem;
 }
 
-.base > h1{
+.base > h1, .thank-you-content > h2{
     color: var(--white);
     font-weight: var(--bold-font);
 }
@@ -65,7 +65,7 @@ main{
     margin-bottom: 1rem;
 }
 
-.base > p, .base > .rating > input{
+.base > p, .base > .rating > label, .thank-you-content > p{
     color: var(--light-gray);
     font-weight: var(--normal-font);
 }
@@ -77,6 +77,8 @@ main{
 
 .rating > input{
     border: 1px solid var(--dark-blue);
+    visibility: hidden;
+    position: absolute;
 }
 
 .base > button{
@@ -90,13 +92,13 @@ main{
     height: 2.5rem;
 }
 
-.rating > input:hover{
+.rating > label:hover{
     background-color: var(--light-gray);
     color: var(--white);
     cursor: pointer;
 }
 
-.rating > input:active{
+.rating > input:checked + label{
     background-color: var(--orange);
     color: var(--white);
 }
@@ -109,6 +111,34 @@ main{
     background-color: var(--white);
     color: var(--orange);
     border: 1px solid var(--white);
+}
+
+.thank-you{
+    display: none;
+}
+
+.thank-you-content{
+    align-items: center;
+    gap: 20px
+}
+
+.thank-you-content > img{
+    width: 180px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.selection{
+    color: var(--orange);
+    background-color: var(--dark-blue);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.thank-you-content > p{
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .attribution {
