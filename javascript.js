@@ -1,7 +1,7 @@
 function switchDisplay(){
-    if(getValue() != true){
+     if(getValue() != true){
         return;
-    }
+    } 
     let baseDisplay = document.querySelector(".base");
     let thanksDisplay = document.querySelector(".thank-you")
     if (baseDisplay.style.display === "flex"){
@@ -12,7 +12,9 @@ function switchDisplay(){
     }
 }
 
-function getValue(){
+
+//First idea => too long 
+/* function getValue(){
     const poor = document.getElementById("1");
     const bad = document.getElementById("2");
     const decent = document.getElementById("3");
@@ -33,4 +35,16 @@ function getValue(){
         return false;
     }
     return true;
+} */
+
+function getValue(){
+    let number = document.querySelector("input[type=radio]:checked");
+    if(number && number.checked){
+        document.querySelector(".get-value").innerHTML = number.value;
+        return true;
+    } else{
+        alert("You've not chosen a number");
+        return false;
+    }
 }
+
