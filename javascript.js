@@ -13,7 +13,7 @@ function switchDisplay(){
 }
 
 
-//First idea => too long 
+//First idea => Not optimized
 /* function getValue(){
     const poor = document.getElementById("1");
     const bad = document.getElementById("2");
@@ -43,7 +43,7 @@ function getValue(){
         document.querySelector(".get-value").innerHTML = number.value;
         return true;
     } else{
-        alert("You've not chosen a number");
+        alert("Please choose a rating");
         return false;
     }
 }
