@@ -63,6 +63,7 @@ main{
 
 .base > p{
     margin-bottom: 1rem;
+    line-height: 25px;
 }
 
 .base > p, .base > .rating > label, .thank-you-content > p{
